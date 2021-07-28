@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arrayOne = [3,5,2,9,4];
+        const arrayTwo = [6,2,8,1,3];
+
+        const sumOne = (accumulator, currentValue) => accumulator + currentValue
+    
+        // console.log(arrayOne.reduce(sumOne))
+        // console.log(arrayTwo.reduce(sumOne))
+
+        console.log(arrayOne.reduce(sumOne) + arrayTwo.reduce(sumOne))
+    </script>
+</body>
+</html>

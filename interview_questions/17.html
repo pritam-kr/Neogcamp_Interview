@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function checkingAge(a,b){
+            
+            const aPower = a.name.length * 35;
+           const bPower = b.name.length * 35;
+
+           if(aPower > bPower){
+              return aPower
+           }else{
+               return bPower
+           }
+
+           if(a.power> b.power){
+               return a.power
+           }else{
+               return b.power
+           }
+            
+        }
+
+        const pOne = {
+            name: "Ram",
+            age: 2500,
+            power: "treta"
+        }
+        const pTwo = {
+            name: "Kishna",
+            age: 2325,
+            power: "Dwapar"
+        }
+
+        const check = checkingAge(pOne, pTwo)
+
+        console.log(check)
+
+    </script>
+</body>
+
+</html>

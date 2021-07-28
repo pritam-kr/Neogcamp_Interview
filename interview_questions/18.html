@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var readlineSync = require('readline-sync');
+
+        const news = readlineSync.question('Enter news \n');
+        const newsSource = readlineSync.question('\n what is the new source? \n\n')
+
+        var faceBook = "facebook";
+        var whatsApp = "whatsapp";
+        var telegrame = "telegram";
+
+        if (newsSource.toUpperCase() == faceBook.toUpperCase() && whatsApp.toUpperCase() && telegrame.toUpperCase()) {
+            console.log("Don't believe news of FACEBOOK, WHATSAPP, and TELEGRAM")
+        } else {
+            console.log("You can believe now.")
+        }
+    </script>
+</body>
+
+</html>

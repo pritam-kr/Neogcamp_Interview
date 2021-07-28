@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function checkingAge(a,b){
+            if(a.age>b.age){
+                return a
+            }else{
+                return b
+            }
+        }
+
+        const pOne = {
+            name: "Ram",
+            age: 25,
+            yuga: "Treta"
+        }
+
+        const pTwo = {
+            name: "Krishna",
+            age: 31,
+            yuga: "Dwapar"
+        }
+
+        const check = checkingAge(pOne, pTwo);
+        console.log(check);
+
+    </script>
+</body>
+</html>

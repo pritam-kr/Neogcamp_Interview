@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let num = [10, 4, 5, 2, 5, 6, 9]
+        let reducer = (accumulator, currentValue) =>  accumulator + currentValue;
+       
+        console.log(num.reduce(reducer)/num.length)
+        // console.log(Math.max(num))
+ 
+
+        maxValue = -Infinity;
+        minValue = Infinity;
+
+        for(n of num) {
+            if(n > maxValue)
+           maxValue = n
+
+        //    console.log(maxValue)
+
+            if(n < minValue)
+            minValue = n
+
+            console.log(minValue)
+        }
+
+
+        // let total = 0;
+        // for(let n of num){
+        //     total = total + n
+        //     console.log(total, total/num.length)
+        // }
+
+        // console.log(num.length)
+       // Getting sum of numbers
+    //    var sum = array.reduce(function(a, b){
+    //         return a + b;
+    //     }, 0);
+    </script>
+</body>
+</html>
