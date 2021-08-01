@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Enter day name"> 
+    </form>
+
+    <script>
+        const weekend = ['Sunday', 'Saturday']
+        document.forms[0].addEventListener('submit', (e) =>{
+            e.preventDefault();
+
+            const inputValue = document.querySelector('input').value;
+                //  console.log(weekend[1].toUpperCase())
+
+
+                if(weekend[0].toUpperCase() === inputValue.toUpperCase()){
+                    console.log('weekend')
+                }else if( weekend[1].toUpperCase() === inputValue.toUpperCase()){
+                    console.log('weekend')
+                }else{
+                    console.log("weekday")
+                }
+
+        })
+
+    </script>
+</body>
+</html>
