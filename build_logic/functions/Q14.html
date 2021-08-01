@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
-    <script src="">
-        
+    <script>
+        function toCapital(sen) {
+            var w = sen.split(' ')
+            for (i = 0; i < w.length; i++) {
+                w[i] = w[i].charAt(0).toUpperCase() + w[i].slice(1, w[i].length)
+            }
+            return w.join(' ')
+        }
+        const str = toCapital('we are neoGrammers')
+        console.log(str)
     </script>
 </body>
+
 </html>
