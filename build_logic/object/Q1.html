@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var sum = 0;
+        const studentDetails = [
+            {
+                roll: "1",
+                name: "Rohan Singh",
+                maths: 86,
+                science: 90,
+                english: 75,
+                computer: 85
+            },
+            {
+                roll: "2",
+                name: "Ritvik Patel",
+                maths: 27,
+                science: 30,
+                english: 35,
+                computer: 30
+            },
+            {
+                roll: "3",
+                name: "Neha Maurya",
+                maths: 75,
+                science: 69,
+                english: 40,
+                computer: 75
+            },
+            {
+                roll: "4",
+                name: "Mohit Verma",
+                maths: 21,
+                science: 31,
+                english: 45,
+                computer: 40
+            },
+            {
+                roll: "5",
+                name: "Karan Trivedi",
+                maths: 70,
+                science: 80,
+                english: 35,
+                computer: 60
+            }
+        ];
+
+        // for(i=0; i<studentDetails.length; i++){
+        //     console.log(studentDetails[0].maths)
+        // }
+
+        studentDetails.forEach((e) =>{
+            console.log(e.maths + e.science + e.english + e.computer)
+        })
+    </script>
+</body>
+
+</html>
