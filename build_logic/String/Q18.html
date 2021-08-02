@@ -7,15 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    
     <script>
-        var inx = 0
-        function check(arr, num){
-              return arr.indexOf(num)
+        function soliving(strings){
+           return strings.split(' ').reverse().join(' ')
         }
-
-        var checking = check([1,2,3,8,5,6,11,8], 3)
-        console.log(checking)
+        var str = soliving('Welcome to NeoG Camp')
+        console.log(str)
     </script>
 </body>
 </html>

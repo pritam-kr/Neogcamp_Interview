@@ -7,15 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    
     <script>
-        var inx = 0
-        function check(arr, num){
-              return arr.indexOf(num)
-        }
+        
+        var str = 'Shifting is equivalent to popping, working on the first element instead of the last';
 
-        var checking = check([1,2,3,8,5,6,11,8], 3)
-        console.log(checking)
+        function removeSpace(){
+            console.log(str.split(' ').join(''))
+        }
+        removeSpace()
     </script>
 </body>
 </html>

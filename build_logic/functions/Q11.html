@@ -7,15 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    
     <script>
-        var inx = 0
-        function check(arr, num){
-              return arr.indexOf(num)
+        function findChar(str, inx){
+            return str.charAt(inx)
         }
-
-        var checking = check([1,2,3,8,5,6,11,8], 3)
-        console.log(checking)
+        const result = findChar("neogCamp", 4)
+        console.log(result)
     </script>
 </body>
 </html>
