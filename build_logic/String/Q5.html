@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function removeVowel(el) {
+        //     // console.log(el.split('').replace(/[aeiou]/g, ""))
+        //     var string = el.split(' ')
+        //     string = string.map((e) => {
+        //         console.log(e.replace(/[aeiou]/g, ''))
+        //     })
+        // }
+
+
+        function removeVowel(el) {
+            var string = el.split(' ')
+            var str = ''
+
+            for (i = 0; i < string.length; i++) {
+                // var char = string[i];
+                // console.log(char.replace(/[aeiou]/g, ''))
+                string[i] = string[i].replace(/[aeiou]/g, '')
+                // console.log(string[i])
+
+                str = str + ' ' + string[i]
+                
+                console.log(str)
+
+            }
+
+        }
+
+        const str = removeVowel('Write a program to delete all vowels from a string')
+
+
+
+    </script>
+</body>
+
+</html>
