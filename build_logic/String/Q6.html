@@ -8,16 +8,17 @@
 </head>
 <body>
     <script>
-        function toggleCase(str){
-            for(i =0; i< str.length; i++){
-                // console.log(str.indexOf(str[i]))
-                if(str.indexOf(str[i])%2 !== 0){
-                   return str[i].toUpperCase()
+        function checkAphanumeric(str){
+            for(i=0; i<str.length; i++){
+                // console.log(str[i])
+
+                if(str[i].match(/[0123456789@]/)){
+                    console.log(`${str[i]} Alphanumeric`)
                 }
             }
         }
-        var string = toggleCase('neogcamp')
-        console.log(string)
+        const result = checkAphanumeric('batman@45')
+        // console.log(result)
     </script>
 </body>
 </html>
