@@ -60,9 +60,12 @@
         //     console.log(studentDetails[0].maths)
         // }
 
-        studentDetails.forEach((e) =>{
-            console.log(e.maths + e.science + e.english + e.computer)
-        })
+        const eachStudent = Object.values(studentDetails);
+
+        for (i = 0; i < studentDetails.length; i++) {
+            console.log(eachStudent[i].name)
+            console.log(eachStudent[i].science + eachStudent[i].maths + eachStudent[i].english + eachStudent[i].computer)
+        }
     </script>
 </body>
 

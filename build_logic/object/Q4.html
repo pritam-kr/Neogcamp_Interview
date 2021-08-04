@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const cartItems = [
+        {
+          id: "101",
+          name: "Oreo",
+          count: 2,
+          price: 30.0,
+          discount: 0.18,
+        },
+        {
+          id: "102",
+          name: "Red Bull",
+          count: 1,
+          price: 99.0,
+          discount: 0.15,
+        },
+        {
+          id: "103",
+          name: "Dairy Milk Silk",
+          count: 3,
+          price: 175.0,
+          discount: 0.05,
+        },
+        {
+          id: "104",
+          name: "Pulse Candy Pack",
+          count: 1,
+          price: 135.0,
+          discount: 0.2,
+        },
+      ];
+
+      const each = Object.values(cartItems);
+
+      var count = 0;
+
+      for (i = 0; i < cartItems.length; i++) {
+        if (each[i].name) {
+          count++;
+          // console.log(count)
+        }
+      }
+
+      // sum of discounted value
+      
+      var discountV = 0;
+      for (i = 0; i < cartItems.length; i++) {
+       
+        discountV = discountV + each[i].discount;
+        // console.log(discountV);
+      }
+
+
+      // total value 
+
+      var totalValue = 0;
+
+      for (i = 0; i < cartItems.length; i++) {
+        // console.log(each[i].discount)
+        totalValue = totalValue + each[i].price;
+        //  console.log(totalValue);
+      }
+
+      //total tax
+
+      var tax = 0;
+
+      for (i = 0; i < cartItems.length; i++) {
+         console.log(each[i].price)
+        tax = tax + ((each[i].price - each[i].discount) * 18) / 100;
+        console.log(tax);
+      }
+    </script>
+  </body>
+</html>
