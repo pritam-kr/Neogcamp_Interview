@@ -15,7 +15,7 @@
       document.forms[0].addEventListener("submit", (e) => {
         e.preventDefault();
         const textValue = document.querySelector("input").value;
-        const url = `https://api.funtranslations.com/translate/sith.json?text=${textValue}`;
+        const url = `https://api.funtranslations.com/translate/pirate.json?text=${textValue}`;
 
         fetch(url)
           .then((res) => {
@@ -23,7 +23,10 @@
           })
           .then((data) => {
             document.querySelector("h1").innerHTML =
-              data.contents.translation.toUpperCase();
+              data.contents.translated.toUpperCase();
+          })
+          .catch((err) => {
+            console.log(err);
           });
       });
     </script>
