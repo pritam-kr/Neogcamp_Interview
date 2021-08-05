@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+    <style>
+      :root {
+        --primary-color: rgb(55, 114, 211);
+        --secondary-color: rgb(69, 70, 71);
+      }
+
+      h1{
+          color: var(--primary-color);
+          font-family: 'Poppins', sans-serif;
+          text-align: center;
+      }
+      h2{
+          color: var(--secondary-color);
+          font-family: 'Poppins', sans-serif;
+          text-align: center;
+      }
+      button{
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        padding: 10px 30px;
+        cursor: pointer;
+      }
+      .primary{
+          background-color: var(--primary-color);
+          color: white;
+          border: 2px solid var(--primary-color);
+          outline: none;
+          cursor: pointer;
+      }
+      .secondary{
+          background: transparent;
+          border: 2px solid var(--primary-color);
+          color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Neogcamp</h1>
+    <h2>Full stack developer</h2>
+    <button class="primary">Primary</button>
+    <button class="secondary">Secondary</button>
+  </body>
+</html>

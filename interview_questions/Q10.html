@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>?</h1>
+    <script>
+      const url = "https://jsonplaceholder.typicode.com/posts";
+
+      fetch(url)
+        .then((res) => {
+            
+          if (res.status === 404) {
+            document.querySelector(
+              "h1"
+            ).innerHTML = `Page not found! ${res.status}`;
+          } else if (res.status === 404) {
+            document.querySelector(
+              "h1"
+            ).innerHTML = `You are not logged in. ${res.status}`;
+          } else {
+            document.querySelector("h1").innerHTML = `Ok!`;
+            return res.json();
+          }
+        })
+        .then((data) => {
+        //   console.log(data);
+        })
+        .catch((err) => {
+          document.querySelector("h1").innerHTML = `You got an error. ${err}`;
+        });
+    </script>
+  </body>
+</html>

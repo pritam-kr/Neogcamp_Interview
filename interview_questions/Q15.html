@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const personOne = {
+        name: "Ram",
+        age: 2500,
+        power: "Treta",
+      };
+
+      const personTwo = {
+        name: "Krishna",
+        age: 2325,
+        power: "Dwapar",
+      };
+
+      function checkAge(one, two){
+            if(one.age>two.age){
+                return one
+            }else{
+                return two
+            }
+      }
+
+      const checkA = checkAge(personOne, personTwo)
+      console.log(checkA.name + " and " + checkA.age)
+    </script>
+</body>
+</html>

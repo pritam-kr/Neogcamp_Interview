@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // name, age, and power as Ram, 2500, Treta. Krishna, 2325, Dwapar
+
+      const personOne = {
+        name: "Ram",
+        age: 2500,
+        power: "Treta",
+      };
+
+      const personTwo = {
+        name: "Krishna",
+        age: 2325,
+        power: "Dwapar",
+      };
+
+      function checkPower(one, two) {
+        if (one.name.length * 35 > two.name.length * 35) {
+          return one;
+        } else if (one.name.length * 35 < two.name.length * 35) {
+          return two;
+        }
+      }
+
+      const check = checkPower(personOne, personTwo);
+      console.log('Power based on name ' + check.name.length*35 + ' and power is ' + check.power);
+    </script>
+  </body>
+</html>
