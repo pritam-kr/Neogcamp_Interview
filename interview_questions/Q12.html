@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        display: none;
+      }
+
+      input {
+        transition: 0.2s all;
+      }
+      .success {
+        border: 3px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="form">
+      <input type="password" id="input-password" />
+      <button>Go!</button>
+    </form>
+
+    <script>
+      const password = document.querySelector("input");
+      const btn = document.querySelector("button");
+      const form = document.querySelector("form");
+      console.log(form);
+
+      password.addEventListener("input", (e) => {
+      if (e.target.value.length === 10) {
+          btn.style.display = "inline-block";
+          password.classList.add("success");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-container">
+        <input type="text" id="text" />
+        <div class="btn-container">
+          <button class="h1">h1</button>
+          <button class="h2">h2</button>
+          <button class="h3">h3</button>
+        </div>
+
+        <h1 class="big-text"></h1>
+      </div>
+    </div>
+    <script>
+      const inputText = document.querySelector("#text");
+      const btn = document.querySelectorAll("button");
+      const bigText = document.querySelector(".big-text");
+
+      btn.forEach((eachBtn) => {
+        eachBtn.addEventListener("click", (el) => {
+          // console.log(el.target.classList)
+          if (el.target.classList[0] === "h1") {
+            bigText.innerHTML = inputText.value;
+            fonthOne();
+          } else if (el.target.classList[0] === "h2") {
+            bigText.innerHTML = inputText.value;
+            fonthTwo();
+          } else {
+            bigText.innerHTML = inputText.value;
+            fonthThree();
+          }
+        });
+      });
+
+      function fonthOne() {
+        bigText.style.fontSize = "32px";
+      }
+
+      function fonthTwo() {
+        bigText.style.fontSize = "24px";
+      }
+
+      function fonthThree() {
+        bigText.style.fontSize = "18.72px";
+      }
+    </script>
+  </body>
+</html>

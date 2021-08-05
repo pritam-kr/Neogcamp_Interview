@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .message {
+        visibility: hidden;
+      }
+      .form-control.error p {
+        visibility: visible;
+        color: red;
+      }
+
+      .form-control.success input {
+        border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conatiner">
+      <div class="password-container">
+        <form action="" id="form">
+          <div class="form-control">
+            <input type="password" id="password" />
+            <button type="submit">Submit</button>
+            <p class="message">Error message</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const form = document.querySelector("#form");
+      const password = document.querySelector("#password");
+      const btn = document.querySelector("button");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        getPassword();
+      });
+
+      function getPassword() {
+        const passwordValue = password.value.trim();
+        //   console.log(passwordValue.length);
+
+        if (passwordValue === "") {
+          checkPassword(password, "password can not blank");
+        } else if (passwordValue.length < 10) {
+          //   console.log('ok')
+          checkPassword(password, "pass is too small");
+        } else if (passwordValue.length >= 10) {
+          complete(password);
+        }
+      }
+
+      function checkPassword(input, message) {
+        const parentEle = input.parentElement;
+        parentEle.className = "form-control error";
+        input.style.borderColor = "red";
+        document.querySelector(".message").innerHTML = message;
+      }
+
+      function complete(e) {
+        const formControl = e.parentElement;
+        // e.style.borderColor = 'green'
+        formControl.className = "form-control success";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="num1" /> <input type="number" id="num2" />
+    <p class="output">?</p>
+    <button>+</button>
+    <button>-</button>
+    <button>*</button>
+    <button>/</button>
+
+    <script>
+      const numOne = document.querySelector("#num1");
+      const numTwo = document.querySelector("#num2");
+      const btn = document.querySelectorAll("button");
+
+      btn.forEach((eachBtn) => {
+        eachBtn.addEventListener("click", (e) => {
+          if (e.target.textContent === "+") {
+            document.querySelector(".output").innerHTML =
+              Number(numOne.value) + Number(numTwo.value);
+          } else if (e.target.textContent === "-") {
+            document.querySelector(".output").innerHTML =
+              Number(numOne.value) - Number(numTwo.value);
+          } else if (e.target.textContent === "*") {
+            document.querySelector(".output").innerHTML =
+              Number(numOne.value) * Number(numTwo.value);
+          } else if (e.target.textContent === "/") {
+            document.querySelector(".output").innerHTML =
+              Number(numOne.value) / Number(numTwo.value);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
