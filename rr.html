@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="text" id="textin" />
+    <button id="in">check</button>
+    <div id="textout"></div>
+
+    <script>
+      var btn = document.getElementById("in");
+      var size = 24;
+      var textin = document.getElementById("textin");
+      var textout = document.getElementById("textout");
+
+      btn.addEventListener("click", (e) => {
+        textout.innerHTML = textin.value;
+        textout.setAttribute("style", "font-size:" + size + "px");
+        size += 5;
+      });
+    </script>
+  </body>
+</html>
