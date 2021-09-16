@@ -10,18 +10,18 @@
     <script>
         const personOne = {
         name: "Ram",
-        age: 2500,
-        power: "Treta",
+        power: 2500,
+        yuga: "Treta",
       };
 
       const personTwo = {
         name: "Krishna",
-        age: 2325,
-        power: "Dwapar",
+        power: 2325,
+        yuga: "Dwapar",
       };
 
       function checkPower(one, two){
-            if(one> two){
+            if(one.power > two.power){
                 return one
             }else{
                 return two
@@ -29,6 +29,7 @@
       }
 
       const checkP = checkPower(personOne, personTwo)
+
       console.log(checkP.name + ' with power ' + checkP.power)
     </script>
 </body>
